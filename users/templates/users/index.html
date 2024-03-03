@@ -1,0 +1,60 @@
+{% extends 'users/base.html' %}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 center-text">
+        
+        <br>
+        <p class="welcome-text">Welcome, booklovers!</p>
+        <br>
+        <br>
+        <p class="normal-text">Welcome to the Reader’s Guild, where we read amazing books, share our best experiences from fictional worlds, and discover our next great reads.</p>
+        <br>
+        <br>
+        <br>
+        
+        
+        <p class="quote-text">"A reader lives a thousand lives before he dies."<br>G.R.R. Martin</p>
+        <br>
+        
+      
+        <p class="link-text">Stories this way</p>
+        <p class="arrow-down">&darr;</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    
+
+    <div class="explore-text">
+    
+           
+                <h2>Explore our Book Catalogue</h2>
+                <br>
+                <p>Discover a world of captivating stories. Our book catalogue offers a diverse collection of genres and authors to satisfy every reader's taste.</p>
+                
+                <a href="{% url 'catalogue' %}" class="btn btn-primary explore-button">Explore</a>
+                
+                <br>
+        
+    
+    </div>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    
+    function scrollToNextSection() {
+      $('html, body').animate({
+        scrollTop: $('.container:nth-of-type(2)').offset().top
+      }, 800); 
+    }
+  </script>
+</body>
+</html>
+
+{% endblock %}

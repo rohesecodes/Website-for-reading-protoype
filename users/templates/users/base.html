@@ -1,0 +1,96 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trocchi">
+      
+        <style>
+          body {
+              background-image: linear-gradient(#cc97cb , #6a2670);
+          }
+      
+          .center-text {
+            text-align: center;
+          }
+          .headline{
+              font-size: 23px;
+              font-family: 'Trocchi', serif;
+              color: rgba(245, 242, 177, 0.999);
+                
+          }
+      
+          .welcome-text {
+            font-size: 57.5px;
+            font-family: 'Abril Fatface', cursive;
+          }
+      
+          .normal-text {
+            font-size: 23px;
+            font-family: 'Trocchi', serif;
+          }
+      
+          .quote-text {
+            font-size: 31.5px;
+            font-family: 'Abril Fatface', cursive;
+          }
+      
+          .link-text {
+            font-size: 24px;
+            font-family: 'Trocchi', serif;
+          }
+      
+          .arrow-down {
+            font-size: 30px;
+            color: #333;
+          }
+          .login-text{
+              font-size: 23px;
+              font-family: 'Trocchi', serif;
+              
+          }
+       
+          .explore-text{
+              font-size: 50px;
+              font-family: 'Trocchi', serif;
+              text-align: center;
+              margin: auto;
+              width: 80%;
+              padding: 10px;
+          
+          }
+          .logo{
+            width: 15%;
+            height: 12%;
+          }
+      
+          .container {
+            margin-top: 70px; 
+          }
+        
+        </style>
+        <title>Reader's Guild</title>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <div>
+                    <a href="">
+                        <img src="{% static 'images/Logo.png' %}" alt="Website Logo" class="logo">
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Logout</a>
+                        {% else %}
+                        <a href="{% url 'login' %}">Login</a>
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        {% block body%}
+
+        {% endblock %}
+    </body>
+</html>

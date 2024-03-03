@@ -1,0 +1,78 @@
+{% load static %}
+{% load static %}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trocchi">
+      
+        <style>
+          body {
+              background-image: linear-gradient(to left,#cc97cb , #6a2670);
+              
+          }
+      
+          .center-text {
+            text-align: center;
+          }
+          .headline{
+              font-size: 23px;
+              font-family: 'Trocchi', serif;
+              color: rgba(245, 242, 177, 0.999);
+                
+          }
+      
+          .welcome-text {
+            font-size: 57.5px;
+            font-family: 'Abril Fatface', cursive;
+            margin-left: 2cm;
+          }
+      
+          .normal-text {
+            font-size: 23px;
+            font-family: 'Trocchi', serif;
+            margin-top: 2cm;
+            margin-left:2cm;
+          }
+      
+          .quote-text {
+            font-size: 31.5px;
+            font-family: 'Abril Fatface', cursive;
+          }
+      
+          .link-text {
+            font-size: 24px;
+            font-family: 'Trocchi', serif;
+          }
+      
+          .arrow-down {
+            font-size: 30px;
+            color: #333;
+          }
+          .login-text{
+              font-size: 23px;
+              font-family: 'Trocchi', serif;
+              margin-left: 2cm;
+              
+          }
+       
+          .explore-text{
+              font-size: 50px;
+              font-family: 'Trocchi', serif;
+              text-align: center;
+              margin: auto;
+              width: 80%;
+              padding: 10px;
+          
+          }
+          .logo{
+            width: 15%;
+            height: 12%;
+          }
+      
+          .container {
+            margin-top: 70px; 
+            margin-left: 2cm;
+          }
+        
+ </style>
+<h1 class="normal-text">You have been logged out!</h1>
+<a class="normal-text" href="{% url 'login' %}">Login again</a>
